@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  base: "./",
   preview: {
     port: 3000,
   },
@@ -18,6 +19,8 @@ export default defineConfig({
         assetFileNames: "[name][extname]",
       },
     },
-    polyfillModulePreload: false,
+    modulePreload: {
+      polyfill: false,
+    },
   },
 });
